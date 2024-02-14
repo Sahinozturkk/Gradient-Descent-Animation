@@ -1,6 +1,3 @@
-Gradient Descent Animation
-
-```markdown
 ---
 title: "Gradient Descent Animation"
 author: "Sahin Ozturk"
