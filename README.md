@@ -1,7 +1,7 @@
 # Gradient-Descent-Animation.
 
 
-##Overview:
+**Overview:**
 This R script demonstrates the process of gradient descent for linear regression through an animation. Gradient descent is an optimization algorithm used to minimize the cost function in machine learning models. In this animation, we visualize how the algorithm iteratively adjusts the parameters (slope and intercept) of a linear regression model to minimize the cost function and improve the fit of the model to the data.
 
 ##Description:
