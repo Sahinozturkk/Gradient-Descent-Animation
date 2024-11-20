@@ -1,6 +1,5 @@
 ---
 
-## **README.md** 
 
 # Gradient Descent Animation
 
