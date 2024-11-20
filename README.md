@@ -1,26 +1,72 @@
-# Gradient-Descent-Animation.
 
 
-**Overview:**
-This R script demonstrates the process of gradient descent for linear regression through an animation. Gradient descent is an optimization algorithm used to minimize the cost function in machine learning models. In this animation, we visualize how the algorithm iteratively adjusts the parameters (slope and intercept) of a linear regression model to minimize the cost function and improve the fit of the model to the data.
+## **Asamali-Azalis-README.md** 
 
-**Description:**
-1. **Setup:** The script begins by loading necessary libraries (`ggplot2` and `gifski`) and setting up the environment.
-2. **Gradient Descent Animation Function:** This section defines the `gradient_descent_animation` function, which takes input data (`x` and `y`), learning rate (`alpha`), and number of iterations (`num_iterations`). Inside the function, gradient descent is performed to optimize the parameters of the linear regression model.
-3. **Plotting Cost Function:** The cost function's history is plotted against the number of iterations to visualize how it decreases over time as the model improves.
-4. **Model Visualization:** The original data points and the predicted values by the linear regression model are plotted to visualize the fit of the model to the data.
-5. **Animation Generation:**Frames for the animation are generated using the `gradient_descent_animation` function. Each frame represents a different iteration of the gradient descent algorithm, showing the progression of the model's parameters towards convergence.
-6. **Exporting Animation:** The frames are exported as PNG files and then converted into a GIF using the `gifski` package. The resulting GIF provides a dynamic visualization of the gradient descent process.
+# Aşamalı Azalış Animasyonu
 
-**Running the Script:**
-To run the script with your own data:
-- Replace `x` and `y` with your input data.
-- Adjust the learning rate (`alpha`) and number of iterations (`num_iterations`) as needed.
-- Ensure that the required libraries (`ggplot2` and `gifski`) are installed and loaded.
 
-**Example Usage:**
-In the provided example, random data is generated for demonstration purposes. You can replace this with your own dataset and adjust the parameters accordingly.
 
-**Note:**
-- This script serves as a visual aid for understanding gradient descent in linear regression and may require modifications for other types of models or datasets.
-- For optimal visualization, it's recommended to adjust the parameters and data based on your specific use case.
+---
+
+### **Aşamalı Azalış Nedir?**
+**Aşamalı azalış (gradient descent)**, bir fonksiyonun minimum değerini bulmak için kullanılan bir optimizasyon algoritmasıdır. Bu yöntem, hata fonksiyonunu küçültmek ve modelin doğruluğunu artırmak için gradyanın ters yönünde iteratif olarak ilerler. Makine öğreniminde, özellikle parametrelerin optimizasyonu için yaygın olarak kullanılır.
+
+---
+
+### **Doğrusal Regresyon Nedir?**
+**Doğrusal regresyon**, bağımlı bir değişken (hedef) ile bir veya daha fazla bağımsız değişken (özellik) arasındaki ilişkiyi modellemek için kullanılan istatistiksel bir yöntemdir. Bu yöntem, veriler arasındaki doğrusal ilişkiyi varsayar ve aşağıdaki denklemle tanımlanır:  
+
+\[
+y = \theta_0 + \theta_1 \cdot x
+\]
+
+Doğrusal regresyon; ekonomi, biyoloji ve makine öğrenimi gibi alanlarda eğilimleri tahmin etmek, ilişkileri analiz etmek ve verileri modellemek için kullanılır.
+
+---
+
+### **Bu Teknikler Neden Kullanılır?**
+- **Aşamalı Azalış**: Modeldeki hatayı azaltmak için en uygun parametreleri (eğim ve sabit) bulmaya yardımcı olur.  
+- **Doğrusal Regresyon**: Girdilere dayalı olarak tahmin yapmak veya eğilimleri analiz etmek için basit ve anlaşılır bir yöntem sunar.
+
+---
+
+### **Adım Adım Rehber**
+
+#### **Adım 1: Ortamı Hazırlayın**
+Gerekli kütüphaneleri yükleyip veriyi tanımlıyoruz:
+```R
+library(ggplot2)
+library(gifski)
+
+set.seed(123)
+x <- iris$Sepal.Length  # Bağımsız değişken
+y <- iris$Petal.Length  # Bağımlı değişken
+```
+
+#### **Adım 2: Gradient Descent Fonksiyonu**
+Bu fonksiyon, maliyet fonksiyonunu hesaplar ve animasyon için regresyon çizgisi katsayılarını kaydeder:
+```R
+gradient_descent_animation <- function(x, y, alpha = 0.01, num_iterations = 1000) {
+  # Fonksiyonun gövdesi (önceden sağlanan kodla aynı)
+}
+```
+
+#### **Adım 3: Maliyet Fonksiyonunu Görselleştirin**
+Maliyet fonksiyonu, hatanın iterasyonlara göre nasıl azaldığını gösterir:
+```R
+results <- gradient_descent_animation(x, y, alpha = 0.01, num_iterations = 1000)
+plot(1:1000, results$cost_history, type = "l", xlab = "Iterasyon", ylab = "Maliyet")
+```
+
+#### **Adım 4: Animasyonu Oluşturun**
+Her iterasyon için kareler oluşturup bunları bir GIF'e birleştiriyoruz:
+```R
+png_files <- sprintf("frame%03d.png", 1:32)
+iters <- seq(1, 1000, length.out = 32)
+
+for (i in 1:length(iters)) {
+  # Animasyon karelerini oluştur
+}
+gifski(png_files, gif_file = "gradient_descent_animation.gif", delay = 0.4)
+unlink(png_files)
+```
