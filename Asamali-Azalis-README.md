@@ -1,6 +1,5 @@
 
 
-## **Asamali-Azalis-README.md** 
 
 # Aşamalı Azalış Animasyonu
 
