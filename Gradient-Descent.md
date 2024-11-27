@@ -45,7 +45,7 @@ y <- iris$Petal.Length  # Dependent variable
 This function performs gradient descent, computes cost function values, and stores regression line coefficients for animation:
 ```R
 gradient_descent_animation <- function(x, y, alpha = 0.01, num_iterations = 1000) {
-  # Function body (same as provided earlier)
+  # Function body 
 }
 ```
 
