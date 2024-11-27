@@ -46,7 +46,7 @@ y <- iris$Petal.Length  # Bağımlı değişken
 Bu fonksiyon, maliyet fonksiyonunu hesaplar ve animasyon için regresyon çizgisi katsayılarını kaydeder:
 ```R
 gradient_descent_animation <- function(x, y, alpha = 0.01, num_iterations = 1000) {
-  # Fonksiyonun gövdesi (önceden sağlanan kodla aynı)
+  # Fonksiyonun gövdesi 
 }
 ```
 
